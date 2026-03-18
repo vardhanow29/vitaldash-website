@@ -4,23 +4,17 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VitalDash — Know Before You Burn Out</title>
-  <meta name="description" content="VitalDash turns your Apple Health data into a Burnout Index score with AI-powered daily recovery advice."/>
-
-  <!-- Google Fonts: Syne + DM Sans (matches the prompt fonts) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
-
-  <!-- Styles -->
+  <meta name="description" content="VitalDash turns Apple Health data into a Burnout Index score with AI-powered daily recovery advice."/>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
-  <!-- GLOBAL CURSOR SPOTLIGHT -->
+  <!-- ibelick page-level cursor spotlight -->
   <div id="cursor-glow"></div>
 
-  <!-- ══════════════════════════════════
+  <!-- ════════════════════════════════
        NAV
-  ══════════════════════════════════ -->
+  ════════════════════════════════ -->
   <nav id="nav">
     <a class="nav-logo" href="#">
       <div class="logo-mark">❤</div>
@@ -35,13 +29,12 @@
     <a href="#download" class="nav-btn">Get Early Access</a>
   </nav>
 
-  <!-- ══════════════════════════════════
-       HERO + LAMP
-       Replicates LampContainer from lamp.tsx
-  ══════════════════════════════════ -->
+  <!-- ════════════════════════════════
+       HERO  +  LAMP
+       LampContainer (lamp.tsx) — cyan lamp
+  ════════════════════════════════ -->
   <section class="hero" id="home">
 
-    <!-- Lamp scene — cyan conic gradients matching 70deg / 290deg -->
     <div class="lamp-scene" aria-hidden="true">
       <div class="lamp-left"></div>
       <div class="lamp-right"></div>
@@ -53,6 +46,7 @@
     </div>
 
     <div class="hero-content">
+
       <div class="hero-pill">
         <div class="pill-dot"></div>
         Free for first 3 months &nbsp;·&nbsp; No credit card needed
@@ -77,24 +71,25 @@
         iOS 16+ &nbsp;·&nbsp; Apple Watch compatible &nbsp;·&nbsp;
         Health data never leaves your device
       </p>
+
     </div>
   </section>
 
-  <!-- ══════════════════════════════════
+  <!-- ════════════════════════════════
        SPLINE CARD
-       Replicates SplineSceneBasic demo:
-       Card + Spotlight + SplineScene
-  ══════════════════════════════════ -->
-  <div class="spline-section" id="demo">
+       SplineSceneBasic demo layout:
+       shadcn/card  +  aceternity/spotlight
+       +  ibelick/spotlight  +  SplineScene
+  ════════════════════════════════ -->
+  <div class="spline-section">
     <div class="spline-card" id="spline-card">
 
-      <!-- Aceternity SVG Spotlight -->
+      <!-- aceternity SVG Spotlight -->
       <svg class="ace-spotlight"
            xmlns="http://www.w3.org/2000/svg"
-           viewBox="0 0 3787 2842"
-           fill="none"
+           viewBox="0 0 3787 2842" fill="none"
            aria-hidden="true">
-        <g filter="url(#spotlight-filter)">
+        <g filter="url(#sf)">
           <ellipse
             cx="1924.71" cy="273.501"
             rx="1924.71"  ry="273.501"
@@ -102,14 +97,14 @@
             fill="white" fill-opacity="0.21"/>
         </g>
         <defs>
-          <filter id="spotlight-filter"
+          <filter id="sf"
                   x="0.860352" y="0.838989"
                   width="3785.16" height="2840.26"
                   filterUnits="userSpaceOnUse"
                   color-interpolation-filters="sRGB">
             <feFlood flood-opacity="0" result="BackgroundImageFix"/>
             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-            <feGaussianBlur stdDeviation="151" result="effect1_foregroundBlur"/>
+            <feGaussianBlur stdDeviation="151"/>
           </filter>
         </defs>
       </svg>
@@ -117,12 +112,13 @@
       <!-- ibelick mouse-follow spotlight -->
       <div class="card-follow-spot" id="card-spot"></div>
 
-      <!-- Left copy panel -->
+      <!-- Left copy (flex-1 p-8) -->
       <div class="card-left">
         <h2>Your health,<br>finally decoded</h2>
         <p>
-          Five Apple Health metrics. One burnout score. Daily AI recovery
-          advice personalised to your real numbers — not generic wellness tips.
+          Five Apple Health metrics. One burnout score.
+          Daily AI recovery advice personalised to your real numbers —
+          not generic wellness tips.
         </p>
         <div class="card-tags">
           <span class="tag">HealthKit</span>
@@ -133,7 +129,7 @@
         </div>
       </div>
 
-      <!-- Right Spline 3D panel -->
+      <!-- Right Spline (flex-1) -->
       <div class="card-right" id="spline-right">
         <div class="spline-loader" id="spline-loader">
           <div class="loader-ring"></div>
@@ -144,9 +140,9 @@
     </div>
   </div>
 
-  <!-- ══════════════════════════════════
-       STATS STRIP
-  ══════════════════════════════════ -->
+  <!-- ════════════════════════════════
+       STATS
+  ════════════════════════════════ -->
   <div class="stats-row">
     <div class="s-item reveal">
       <div class="s-n">5</div>
@@ -166,9 +162,9 @@
     </div>
   </div>
 
-  <!-- ══════════════════════════════════
+  <!-- ════════════════════════════════
        FEATURES
-  ══════════════════════════════════ -->
+  ════════════════════════════════ -->
   <section class="sec" id="features">
     <p class="sec-tag reveal">Features</p>
     <h2 class="sec-h reveal">Everything you need<br>to prevent burnout</h2>
@@ -176,41 +172,41 @@
 
     <div class="feat-grid">
       <div class="feat-card reveal">
-        <div class="feat-ic" style="background:rgba(224,92,42,.12)">🔥</div>
+        <div class="feat-ic" style="background:rgba(224,92,42,0.1)">🔥</div>
         <h3>Burnout Index Ring</h3>
         <p>A single 0–100 score from sleep deficit, HRV trend, resting HR, activity load and sleep consistency. Refreshed every morning.</p>
       </div>
       <div class="feat-card reveal">
-        <div class="feat-ic" style="background:rgba(34,197,94,.1)">⚡</div>
+        <div class="feat-ic" style="background:rgba(22,163,74,0.1)">⚡</div>
         <h3>Recovery Score</h3>
         <p>Know exactly how recovered you are today. Green means push. Red means rest. No guesswork, no complicated dashboards.</p>
       </div>
       <div class="feat-card reveal">
-        <div class="feat-ic" style="background:rgba(168,85,247,.1)">🌙</div>
+        <div class="feat-ic" style="background:rgba(168,85,247,0.1)">🌙</div>
         <h3>7-Day Sleep Chart</h3>
         <p>Sleep history from Apple Health. Spot the patterns that explain why you feel exhausted before your day even starts.</p>
       </div>
       <div class="feat-card reveal">
-        <div class="feat-ic" style="background:rgba(6,182,212,.1)">📈</div>
+        <div class="feat-ic" style="background:rgba(6,182,212,0.1)">📈</div>
         <h3>HRV Trend Analysis</h3>
         <p>Heart Rate Variability is the best predictor of burnout. VitalDash tracks your 7-day HRV slope and alerts you when it drops.</p>
       </div>
       <div class="feat-card reveal">
-        <div class="feat-ic" style="background:rgba(234,179,8,.1)">✨</div>
+        <div class="feat-ic" style="background:rgba(234,179,8,0.1)">✨</div>
         <h3>AI Recovery Insights</h3>
         <p>Powered by GPT-4o mini via a secure backend. Personalised to your actual health numbers — never a generic wellness tip.</p>
       </div>
       <div class="feat-card reveal">
-        <div class="feat-ic" style="background:rgba(236,72,153,.1)">🩸</div>
+        <div class="feat-ic" style="background:rgba(236,72,153,0.1)">🩸</div>
         <h3>Cycle Tracking</h3>
         <p>For women — understand how each hormonal phase affects your burnout score and recovery capacity each month.</p>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════
+  <!-- ════════════════════════════════
        HOW IT WORKS
-  ══════════════════════════════════ -->
+  ════════════════════════════════ -->
   <div class="how-sec" id="how">
     <div class="how-inner">
       <p class="sec-tag reveal">How it works</p>
@@ -220,34 +216,31 @@
         <div class="step reveal">
           <div class="step-n">01</div>
           <div class="step-b">
-            <div class="step-chip" style="background:rgba(6,182,212,.1);color:#7DD3FC;">Apple Health</div>
+            <div class="step-chip" style="background:rgba(6,182,212,0.1);color:#0891B2;">Apple Health</div>
             <h3>Connect once, run forever</h3>
             <p>VitalDash reads your existing sleep, HRV and heart rate from Apple Health. No wearable required — though Apple Watch gives the richest data.</p>
           </div>
         </div>
-
         <div class="step reveal">
           <div class="step-n">02</div>
           <div class="step-b">
-            <div class="step-chip" style="background:rgba(224,92,42,.1);color:#FFA87A;">Algorithm</div>
+            <div class="step-chip" style="background:rgba(224,92,42,0.1);color:#C2410C;">Algorithm</div>
             <h3>See your Burnout Index instantly</h3>
             <p>Five weighted metrics combine into one honest score every morning — sleep deficit, HRV trend, resting HR, activity load and sleep consistency.</p>
           </div>
         </div>
-
         <div class="step reveal">
           <div class="step-n">03</div>
           <div class="step-b">
-            <div class="step-chip" style="background:rgba(234,179,8,.1);color:#FDE047;">AI</div>
+            <div class="step-chip" style="background:rgba(234,179,8,0.1);color:#A16207;">AI</div>
             <h3>Get your personalised insight</h3>
             <p>Every day a 2–3 sentence recovery recommendation based on your real numbers — not a generic tip copied from a wellness blog.</p>
           </div>
         </div>
-
         <div class="step reveal">
           <div class="step-n">04</div>
           <div class="step-b">
-            <div class="step-chip" style="background:rgba(168,85,247,.1);color:#D8B4FE;">History</div>
+            <div class="step-chip" style="background:rgba(168,85,247,0.1);color:#7E22CE;">History</div>
             <h3>Watch yourself recover over time</h3>
             <p>30 days of history stored locally on your iPhone. See burnout patterns, track your recovery arc and build lasting resilience.</p>
           </div>
@@ -256,14 +249,13 @@
     </div>
   </div>
 
-  <!-- ══════════════════════════════════
+  <!-- ════════════════════════════════
        PRIVACY
-  ══════════════════════════════════ -->
+  ════════════════════════════════ -->
   <div class="priv-sec">
     <p class="sec-tag reveal" style="justify-content:center">Privacy</p>
     <h2 class="sec-h reveal">Your health data stays yours</h2>
     <p class="sec-sub reveal" style="margin:0 auto">We built VitalDash with privacy as the foundation — not a checkbox.</p>
-
     <div class="priv-grid">
       <div class="p-card reveal">
         <div class="p-icon">📱</div>
@@ -288,12 +280,11 @@
     </div>
   </div>
 
-  <!-- ══════════════════════════════════
+  <!-- ════════════════════════════════
        APPLE WATCH
-  ══════════════════════════════════ -->
+  ════════════════════════════════ -->
   <div class="watch-sec" id="watch">
     <div class="watch-layout">
-
       <div class="watch-visual reveal">
         <div class="watch-frame">
           <div class="w-crown"></div>
@@ -308,18 +299,11 @@
             </div>
           </div>
           <div class="w-row">
-            <div class="w-stat">
-              <div class="w-sv" style="color:#22C55E">72</div>
-              <div class="w-sl">RECOVERY</div>
-            </div>
-            <div class="w-stat">
-              <div class="w-sv" style="color:#06B6D4">48</div>
-              <div class="w-sl">HRV MS</div>
-            </div>
+            <div class="w-stat"><div class="w-sv" style="color:#22C55E">72</div><div class="w-sl">RECOVERY</div></div>
+            <div class="w-stat"><div class="w-sv" style="color:#06B6D4">48</div><div class="w-sl">HRV MS</div></div>
           </div>
         </div>
       </div>
-
       <div class="watch-copy reveal">
         <p class="sec-tag">Apple Watch</p>
         <h3>Your burnout ring,<br>on your wrist</h3>
@@ -332,19 +316,17 @@
           <li><div class="wf-dot"></div>Syncs via WatchConnectivity automatically</li>
         </ul>
       </div>
-
     </div>
   </div>
 
-  <!-- ══════════════════════════════════
+  <!-- ════════════════════════════════
        PRICING
-  ══════════════════════════════════ -->
+  ════════════════════════════════ -->
   <div class="price-sec" id="pricing">
     <div class="price-inner">
       <p class="sec-tag reveal" style="justify-content:center">Pricing</p>
       <h2 class="sec-h reveal">Simple and fair</h2>
       <p class="sec-sub reveal" style="margin:0 auto">Free for the first 3 months. No credit card. No catch.</p>
-
       <div class="price-grid">
         <div class="pc reveal">
           <div class="pc-tier">Free</div>
@@ -360,7 +342,6 @@
             <li><div class="chk">✓</div>Face ID protection</li>
           </ul>
         </div>
-
         <div class="pc hot reveal">
           <div class="hot-badge">Most Popular</div>
           <div class="pc-tier">Premium</div>
@@ -377,13 +358,12 @@
           </ul>
         </div>
       </div>
-
     </div>
   </div>
 
-  <!-- ══════════════════════════════════
-       CTA — orange lamp variant
-  ══════════════════════════════════ -->
+  <!-- ════════════════════════════════
+       CTA  —  orange lamp variant
+  ════════════════════════════════ -->
   <section class="cta-sec" id="download">
     <div class="cta-lamp" aria-hidden="true">
       <div class="cta-lamp-l"></div>
@@ -392,35 +372,26 @@
       <div class="cta-lamp-line"></div>
       <div class="cta-lamp-floor"></div>
     </div>
-
     <div class="cta-content">
       <h2 class="cta-h reveal">Start tracking<br>your burnout today</h2>
       <p class="cta-sub reveal">
         All premium features free for the first 3 months.<br>
         No account. No card. Just download and go.
       </p>
-
       <div class="wl-form reveal">
-        <input
-          type="email"
-          id="wl-email"
-          class="wl-input"
-          placeholder="Enter your email for early access"
-        />
+        <input type="email" id="wl-email" class="wl-input" placeholder="Enter your email for early access"/>
         <button class="btn-primary" onclick="joinList()">Join Waitlist</button>
       </div>
-
       <p id="wl-ok">✓ You're on the list! We'll email you when VitalDash launches.</p>
-
       <p class="hero-small reveal" style="margin-top:14px">
         iOS 16+ &nbsp;·&nbsp; Apple Watch compatible &nbsp;·&nbsp; No account required
       </p>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════
+  <!-- ════════════════════════════════
        FOOTER
-  ══════════════════════════════════ -->
+  ════════════════════════════════ -->
   <footer>
     <div class="footer-logo"><span>❤</span> VitalDash</div>
     <p>© 2026 VitalDash. Built with care by Vishnu Vardhan Pappula.</p>
@@ -431,8 +402,6 @@
     </div>
   </footer>
 
-  <!-- Script -->
   <script src="script.js" type="module"></script>
-
 </body>
 </html>
